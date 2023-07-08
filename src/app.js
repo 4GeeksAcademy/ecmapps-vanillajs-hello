@@ -10,7 +10,7 @@ window.onload = function() {
   document.getElementById("excuse").innerHTML = newExcuse();
 };
 function newExcuse() {
-  let str = "";
+  let excusa = "";
   let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
   let what = ["my homework", "the keys", "the car"];
@@ -24,12 +24,11 @@ function newExcuse() {
   let words = [who, action, what, when];
   for (let i = 0; i < words.length; i++) {
     let randomNumber = Math.floor(Math.random() * words[i].length);
-    str += words[i][randomNumber];
-    //Adding a space between words below except to the last one.
+    excusa += words[i][randomNumber];
+    clearImmediate;
     if (i + 1 < words.length) {
-      str += " ";
+      excusa += " ";
     }
   }
-
-  return str;
+  return excusa;
 }
