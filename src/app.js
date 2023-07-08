@@ -24,11 +24,7 @@ function newExcuse() {
   let words = [who, action, what, when];
   for (let i = 0; i < words.length; i++) {
     let randomNumber = Math.floor(Math.random() * words[i].length);
-    excusa += words[i][randomNumber];
-    clearImmediate;
-    if (i + 1 < words.length) {
-      excusa += " ";
-    }
+    excusa += words[i][randomNumber] + " ";
   }
   return excusa;
 }
